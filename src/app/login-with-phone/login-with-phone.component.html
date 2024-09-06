@@ -1,0 +1,21 @@
+<div class="container mt-5 d-flex  justify-content-center"> 
+    
+    <form  class="col-12 col-md-8 col-lg-4 border p-4 rounded-4 shadow">
+     
+        <h3 class="text-center mb-4">Continue With Phone Number</h3>
+<div class="form-group">
+  <label class="form-label" for="phone-number">Phone Number:</label>
+  <input class="form-control" id="phone-number" name="pnumber" [(ngModel)]="phoneNumber" type="text" placeholder="+1234567890">
+  <button class="btn btn-danger m-2" (click)="sendVerificationCode()">Send Verification Code</button>
+</div>
+<div class="form-group">
+  <label class="form-label" for="verification-code">Verification Code:</label>
+  <input class="form-control" id="verification-code" name="otp" [(ngModel)]="verificationCode" type="text" placeholder="123456">
+  <div id="recaptcha-container"></div>
+ 
+  <button class="btn btn-secondary m-2" routerLink="/login">Back</button>
+  <button class="btn btn-danger m-2" (click)="verifyCode()">Verify Code</button>
+</div>
+
+</form>
+</div>

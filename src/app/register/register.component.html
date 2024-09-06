@@ -1,0 +1,19 @@
+<div class="container mt-5 d-flex justify-content-center">
+    <form (ngSubmit)="onRegister()" class="col-12 col-md-8 col-lg-4 border p-4 rounded-4 shadow">
+        <h1 class="text-center mb-4">Register</h1>
+        <p class="alert alert-danger" *ngIf="message">
+            {{message}}
+        </p>
+        <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control mb-3" type="email" name="email" id="email" [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="password">password</label>
+            <input class="form-control" type="email" name="email " id="password" [(ngModel)]="password">
+        </div>
+        <button type="submit" class="btn btn-danger mt-2 d-block mx-auto">Register</button>
+
+        <p class="text-center mt-3 mb-5">Already have an account? <a class="pe-auto" routerLink="/login">Login</a> </p>
+    </form>
+</div>
